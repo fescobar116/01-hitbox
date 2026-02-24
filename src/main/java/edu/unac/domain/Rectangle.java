@@ -30,7 +30,7 @@ public class Rectangle {
     }
 
     private boolean contain(double x, double y){
-        return getMinX() < x && x < getMaxX() &&
+        return getMinX() <= x && x <= getMaxX() &&
             getMinY() <= y && y <= getMaxY();
     }
 
