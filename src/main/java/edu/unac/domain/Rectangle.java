@@ -35,6 +35,9 @@ public class Rectangle {
     }
 
     public boolean collision(Rectangle rectangle){
+        if (rectangle == null)
+            throw new IllegalArgumentException("Rectangle is required");
+
         return this.contain(rectangle.getMinX() , rectangle.getMaxY()) ||
                 this.contain(rectangle.getMaxX() , rectangle.getMaxY()) ||
                 this.contain(rectangle.getMinX() , rectangle.getMinY()) ||
